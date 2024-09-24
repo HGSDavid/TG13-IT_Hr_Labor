@@ -1,4 +1,4 @@
-package ThreadsMitInterface;
+package A_ThreadsMitInterface;
 
 public class MeinThread implements Runnable {
 

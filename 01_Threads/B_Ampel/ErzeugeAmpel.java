@@ -1,4 +1,4 @@
-package Ampel;
+package B_Ampel;
 
 public class ErzeugeAmpel {
     public static void main(String[] args) {

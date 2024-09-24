@@ -1,4 +1,4 @@
-package Ampel;
+package B_Ampel;
 
 public class Ampel implements Runnable {
 

@@ -1,4 +1,4 @@
-package ThreadsMitInterface;
+package A_ThreadsMitInterface;
 
 public class ErzeugeThread{
     public static void main(String[] args){
