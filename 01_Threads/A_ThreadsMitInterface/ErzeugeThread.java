@@ -2,8 +2,8 @@ package A_ThreadsMitInterface;
 
 public class ErzeugeThread{
     public static void main(String[] args){
-        System.out.println("Thread mit Interface start");
-
+        System.out.println("----- ThreadMitInterface gestartet -----");
+        
         //Threadobjekte erzeugen
         MeinThread a = new MeinThread("a", 3);
         MeinThread b = new MeinThread("b", 10);
