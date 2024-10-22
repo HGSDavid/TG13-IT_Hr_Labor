@@ -25,7 +25,7 @@ public class LinkedListBsp {
                 einkaufsliste.remove(s.next());
 
             } else if (eingabe.equals("s")) {
-                System.out.print("Speichern\n--------------------------");
+                System.out.println("Speichern\n--------------------------");
                 break;
 
             } else {
