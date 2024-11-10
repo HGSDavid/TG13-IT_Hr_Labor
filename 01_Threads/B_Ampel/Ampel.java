@@ -14,6 +14,7 @@ public class Ampel implements Runnable {
 
     private int Zustand = 1;
 
+    //Konstruktor
     public Ampel(String ampelName, int speed) {
         this.ampelName = ampelName;
         this.wait = speed;

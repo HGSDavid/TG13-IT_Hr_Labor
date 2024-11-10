@@ -2,7 +2,7 @@ package C_ThreadUnterbrechen;
 
 import java.util.Scanner;
 
-public class ThreadMitInterrupt {
+public class starteUnterbrechung {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class ThreadMitInterrupt {
         System.out.println("----- ThreadMitInterrupt gestartet -----");
 
         //Threadobjekt erzeugen
-        UnterbrechungKonsole t = new UnterbrechungKonsole ("Ampel1", 1000);
+        Unterbrechung t = new Unterbrechung ("Ampel1", 1000);
 
         //Thread nebenläufig starten
         t.start();

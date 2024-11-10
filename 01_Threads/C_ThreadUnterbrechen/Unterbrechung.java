@@ -1,21 +1,21 @@
 package C_ThreadUnterbrechen;
 
-public class UnterbrechungKonsole implements Runnable {
-    
-    String ampelName;
-    String eingabe;
+public class Unterbrechung implements Runnable {
+
+    private String ampelName;
+    private String eingabe;
     private int wait;
-    Thread t;
+    private Thread t;
 
     // AmpelZustände
-    public static final int rot     = 1;
+    public static final int rot = 1;
     public static final int rotGelb = 2;
-    public static final int gelb    = 3;
-    public static final int grün    = 4;
+    public static final int gelb = 3;
+    public static final int grün = 4;
 
     private int Zustand = 1;
 
-    public UnterbrechungKonsole (String ampelName, int speed) {
+    public Unterbrechung(String ampelName, int speed) {
         this.ampelName = ampelName;
         this.wait = speed;
         t = new Thread(this);
@@ -24,7 +24,7 @@ public class UnterbrechungKonsole implements Runnable {
     @Override
     public void run() {
         while (true) {
-            if (isInterrupted()== true) {
+            if (isInterrupted() == true) {
                 break;
             }
             switch (Zustand) {
