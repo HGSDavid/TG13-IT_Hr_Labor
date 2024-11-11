@@ -3,10 +3,12 @@ package E_Discolicht;
 import java.util.Scanner;
 
 public class StarteDiscolicht {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         System.out.println("----- Ampel gestartet -----");
 
-        Scanner s = new Scanner(System.in);
+        Scanner s;
+        s = new Scanner(System.in);
 
         Discolicht dl1 = new Discolicht("Decke", 500);
         Discolicht dl2 = new Discolicht("Boden", 1000);

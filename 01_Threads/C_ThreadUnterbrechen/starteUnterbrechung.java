@@ -3,6 +3,7 @@ package C_ThreadUnterbrechen;
 import java.util.Scanner;
 
 public class starteUnterbrechung {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);

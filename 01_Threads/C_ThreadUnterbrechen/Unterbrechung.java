@@ -2,8 +2,6 @@ package C_ThreadUnterbrechen;
 
 public class Unterbrechung implements Runnable {
 
-    private String ampelName;
-    private String eingabe;
     private int wait;
     private Thread t;
 
@@ -16,17 +14,14 @@ public class Unterbrechung implements Runnable {
     private int Zustand = 1;
 
     public Unterbrechung(String ampelName, int speed) {
-        this.ampelName = ampelName;
         this.wait = speed;
         t = new Thread(this);
     }
 
     @Override
     public void run() {
-        while (true) {
-            if (isInterrupted() == true) {
-                break;
-            }
+        while (! this.isInterrupted()) {
+
             switch (Zustand) {
                 case rot:
                     System.out.println("Ampel rot");

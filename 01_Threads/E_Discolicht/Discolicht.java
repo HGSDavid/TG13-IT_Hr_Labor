@@ -24,11 +24,8 @@ public class Discolicht implements Runnable {
     
     @Override
     public void run() {
-        while (true) {
-            if (this.isInterrupted() == true) {
-                break;
-            }
-
+        while (! this.isInterrupted()) {
+            
             switch (Zustand) {
                 case rot:
                     System.out.println(lichtName + ": -- Rot  --");
