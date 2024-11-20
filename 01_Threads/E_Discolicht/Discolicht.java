@@ -4,7 +4,7 @@ public class Discolicht implements Runnable {
 
     private String lichtName;
     private int wait;
-    private Thread t;
+    private Thread t = new Thread(this);
 
     // LichtZustände
     public static final int rot     = 1;
@@ -18,8 +18,6 @@ public class Discolicht implements Runnable {
     public Discolicht(String lichtName, int wait) {
         this.lichtName = lichtName;
         this.wait = wait;
-
-        t = new Thread(this);
     }
     
     @Override
