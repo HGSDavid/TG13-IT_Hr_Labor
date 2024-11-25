@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Sets {
+public class SetsAufgabe {
     public static void main(String[] args) {
         Set<String> mitarbeiter = new HashSet<>();
 

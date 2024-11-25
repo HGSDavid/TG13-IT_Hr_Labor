@@ -1,6 +1,8 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class MapsUndSets {
     public static void main(String[] args) {
@@ -34,25 +36,41 @@ public class MapsUndSets {
         System.out.println("Map nach löschen: " + körpergrößen);
 
 
-        // Stack erstellen
+        // Set erstellen
         HashSet<String> namensListe = new HashSet<>();
 
-        // Stack - hinzufügen
+        // Set - hinzufügen
         //             (nichts doppelt)
         namensListe.add("Dajana");
         namensListe.add("Sarah");
 
+        namensListe.addAll(Arrays.asList(new String[] {"Milena", "Mona"}));
+
         // Aus Map hinzufügen
         namensListe.addAll(körpergrößen.keySet());
 
-        // Stack - Ausgabe (unschön)
+        // Set - Ausgabe (unschön)
         System.out.println("Folgende Namen sind im Stack: " + namensListe);
 
-        // Stack - Auf Inhalt prüfen
+        // Set - Auf Inhalt prüfen
         System.out.println("Das Stack enthält Dajana: " + namensListe.contains("Dajana"));
 
-        // Stack - entfernen
+        // Set - entfernen
         namensListe.remove("Sarah");
         System.out.println("Stack nach löschen: " + namensListe);
+
+        // Set - Zusammenfügen
+        HashSet<String> andereNamen = new HashSet<>(Arrays.asList(new String[] {"Tina", "Ines"}));
+        namensListe.addAll(andereNamen);
+        System.out.println("Zusammengeführt: " + namensListe);
+
+        // Set - Schnittmenge
+        Set<String> gemeinsam = new HashSet<>(namensListe);
+        gemeinsam.retainAll(andereNamen);
+        System.out.println("Hinzugefügt wurden: " + gemeinsam);
+
+        // Set - Differenz
+        namensListe.removeAll(gemeinsam);
+        System.out.println("Übrig bleiben: " + namensListe);
     }
 }

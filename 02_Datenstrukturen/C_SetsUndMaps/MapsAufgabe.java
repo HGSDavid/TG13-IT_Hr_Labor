@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Maps {
+public class MapsAufgabe {
     
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
