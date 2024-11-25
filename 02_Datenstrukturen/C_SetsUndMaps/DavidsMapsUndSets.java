@@ -1,12 +1,10 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class DavidsMapsUndSets {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
 
         // Map erstellen
         HashMap<String, Integer> körpergrößen = new HashMap<>();
