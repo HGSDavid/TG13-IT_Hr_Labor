@@ -2,17 +2,28 @@
 **Der K-nearest neighbors (KNN) Algorithmus, wörtlich der K-nächste-Nachbarn-Algorithmus, ist ein Machine-Learning-Algorithmus. Er gehört zur Klasse der einfachen und leicht zu implementierenden überwachten Lernalgorithmen und kann zur Lösung von Klassifikations- und Regressionsproblemen verwendet werden.**
 
 ## Definition
-Beim überwachten Lernen erhält ein Algorithmus einen Datensatz, der mit entsprechenden Ausgangswerten beschriftet ist, mit dem er trainieren und ein Vorhersagemodell definieren kann. Dieser Algorithmus kann dann auf neue Daten angewendet werden, um die entsprechenden Ausgangswerte vorherzusagen.
+> Beim überwachten Lernen erhält ein Algorithmus einen Datensatz, der mit entsprechenden Ausgangswerten beschriftet ist, mit dem er trainieren und ein Vorhersagemodell definieren kann. Dieser Algorithmus kann dann auf neue Daten angewendet werden, um die entsprechenden Ausgangswerte vorherzusagen.
+
 ![Prinzip eines Algorithmus](A_Bilder/Bild%202.jpg)
 
-1. **Schritt:** Wähle die Anzahl K der Nachbarn aus.
-2. **Schritt:** Berechne die Distanz vom nicht klassifizierten Punkt zu anderen Punnkten
-![Manhattan](A_Bilder/Manhattan.png)
-![Euklidisch](A_Bilder/Euklidisch.png)
+## Funktionsweise
+
+1. **Schritt:** Wähle die Anzahl K der betrachteten Nachbarn aus.
+
+2. **Schritt:** Berechne die Distanz vom nicht klassifizierten Punkt zu allen anderen Punkten
+   1. Zwei Dimensionen: Satz des Pythagoras $$a²+b²=c²$$
+   2. Mehr Dimensionen:
+
+> Manhattan Distanz: $$\sqrt{\displaystyle\sum_{i=1}^n (x_i-y_i)^2}$$
+
+> Euklidische Summe: $$\sqrt{\displaystyle\sum_{i=1}^n |x_i-y_i|}$$
 
 3. **Schritt** Nimm die K nächsten Nachbarn gemäß der berechneten Distanz.
+
 4. **Schritt:** Zähle unter diesen K Nachbarn die Anzahl der Punkte, die zu jeder Kategorie gehören.
-5. **Schritt:** Ordne den neuen Punkt der Kategorie zu, die unter diesen K Nachbarn am häufigsten vertreten ist.
+
+5. **Schritt:** Ordne dem neuen Punkt die Kategorie zu, die unter diesen K Nachbarn am häufigsten vertreten ist.
+
 6. **Schritt:** ![](A_Bilder/Before_After%20K-NN.jpg)
 
 ## Anwendungsbeispiel
@@ -32,8 +43,10 @@ In der Grafik können wir sehen, dass die beste Vorhersagequote bei K zwischen 5
 ## Bewertung
 ### Vorteile
 - einfach und leicht zu implementieren. 
-- nicht notwendig, ein Modell zu erstellen, Parameter einzustellen oder zusätzliche Annahmen zu treffen.
+- keine Trainungszeit - muss nicht trainiert werden
 - vielseitig einsetzbar - Kann sowohl für Klassifizierung als auch für Regression verwendet werden.
 
 ### Nachteile
 - Wird mit zunehmender Anzahl von Beobachtungen und unabhängigen Variablen wesentlich langsamer.
+- K muss zunächst bestimmt werden
+- Normierung der Eigenschaften
